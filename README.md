@@ -1,4 +1,4 @@
-For submitting Task 6.1D, including Personalized Learning Experience App.
+For submitting Task 6.1D, including Personalized Learning Experience App and related backend project.
 
 To use this project, you should first install the backend project and deploy related env;
 (And remember to fill the hugging face token by yourself)
