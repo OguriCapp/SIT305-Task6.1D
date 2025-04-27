@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_green"
+    android:padding="20dp">
+
+    <!-- App Title -->
+    <TextView
+        android:id="@+id/appTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_title"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textStyle="bold|italic"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:layout_marginBottom="10dp" />
+        
+    <!-- Loading Container -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loadingContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80FFFFFF"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Getting AI feedback..."
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar"
+            android:layout_marginTop="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Results Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@+id/continueButton"
+        android:layout_below="@id/appTitleTextView"
+        android:layout_alignParentTop="false">
+
+        <!-- Results Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/your_results"
+            android:textSize="32sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+        <!-- AI Generated Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/generated_by_ai"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_gravity="end"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Question 1 Results -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/result_item_background"
+            android:layout_marginBottom="15dp">
+
+            <!-- Question 1 Label -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/question_1"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="5dp" />
+
+            <!-- AI Response for Question 1 -->
+            <TextView
+                android:id="@+id/response1TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/response_from_model"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:padding="8dp"
+                android:scrollbars="vertical"
+                android:maxLines="15"
+                android:gravity="start" />
+        </LinearLayout>
+
+        <!-- Question 2 Results -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/result_item_background"
+            android:layout_marginBottom="15dp">
+
+            <!-- Question 2 Label -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/question_2"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="5dp" />
+
+            <!-- AI Response for Question 2 -->
+            <TextView
+                android:id="@+id/response2TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/response_from_model"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:padding="8dp"
+                android:scrollbars="vertical"
+                android:maxLines="15"
+                android:gravity="start" />
+        </LinearLayout>
+
+        <!-- Question 3 Results -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/result_item_background">
+
+            <!-- Question 3 Label -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/question_3"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="5dp" />
+
+            <!-- AI Response for Question 3 -->
+            <TextView
+                android:id="@+id/response3TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/response_from_model"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:padding="8dp"
+                android:scrollbars="vertical"
+                android:maxLines="15"
+                android:gravity="start" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Continue Button -->
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/continue_text"
+        android:textColor="@color/black"
+        android:background="@drawable/green_button"
+        android:textAllCaps="false"
+        android:padding="12dp"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout> 

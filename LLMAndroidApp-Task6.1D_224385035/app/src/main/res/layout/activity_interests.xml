@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_green"
+    android:padding="20dp">
+
+    <!-- App Title -->
+    <TextView
+        android:id="@+id/appTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_title"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textStyle="bold|italic"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Scrollable Content Area -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/nextButton"
+        android:layout_below="@id/appTitleTextView">
+
+        <!-- Interests Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Interests Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/your_interests"
+                android:textSize="32sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp" />
+
+            <!-- Selection Hint -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/you_may_select"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Interest Tags Grid -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="8"
+                android:alignmentMode="alignMargins"
+                android:useDefaultMargins="true">
+
+                <!-- First row -->
+                <TextView
+                    android:id="@+id/algorithmTag1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:text="@string/algorithms"
+                    style="@style/InterestTag"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/dataStructuresTag1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:text="@string/data_structures"
+                    style="@style/InterestTag"
+                    android:gravity="center" />
+
+                <!-- Second row -->
+                <TextView
+                    android:id="@+id/webDevTag1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:text="@string/web_development"
+                    style="@style/InterestTag"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/testingTag1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:text="@string/testing"
+                    style="@style/InterestTag"
+                    android:gravity="center" />
+
+                <!-- Third row -->
+                <TextView
+                    android:id="@+id/algorithmTag2"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:text="@string/algorithms"
+                    style="@style/InterestTag"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/dataStructuresTag2"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:text="@string/data_structures"
+                    style="@style/InterestTag"
+                    android:gravity="center" />
+
+                <!-- Fourth row -->
+                <TextView
+                    android:id="@+id/webDevTag2"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:text="@string/web_development"
+                    style="@style/InterestTag"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/testingTag2"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:text="@string/testing"
+                    style="@style/InterestTag"
+                    android:gravity="center" />
+
+                <!-- Fifth row -->
+                <TextView
+                    android:id="@+id/algorithmTag3"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:text="@string/algorithms"
+                    style="@style/InterestTag"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/dataStructuresTag3"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:text="@string/data_structures"
+                    style="@style/InterestTag"
+                    android:gravity="center" />
+
+                <!-- Sixth row -->
+                <TextView
+                    android:id="@+id/webDevTag3"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:text="@string/web_development"
+                    style="@style/InterestTag"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/testingTag3"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:text="@string/testing"
+                    style="@style/InterestTag"
+                    android:gravity="center" />
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Next Button -->
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:background="@drawable/green_button_gradient"
+        android:textAllCaps="false"
+        android:padding="12dp"
+        android:layout_alignParentBottom="true"
+        android:elevation="4dp" />
+</RelativeLayout> 

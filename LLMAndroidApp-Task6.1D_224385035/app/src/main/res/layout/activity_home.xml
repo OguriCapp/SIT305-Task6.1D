@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_green"
+    android:padding="20dp">
+
+    <!-- Top Bar with Title and Logout Button -->
+    <RelativeLayout
+        android:id="@+id/topBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/appTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_title"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold|italic"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:layout_marginBottom="10dp" />
+            
+        <!-- Logout Button -->
+    </RelativeLayout>
+
+    <!-- Main Content Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/topBarLayout">
+
+        <!-- User Information Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <!-- User Information -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Greeting Text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hello"
+                    android:textSize="24sp"
+                    android:textColor="@color/black" />
+
+                <!-- User Name -->
+                <TextView
+                    android:id="@+id/userNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_name"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <!-- Task Count -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/you_have_1_task_due"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- Profile Image -->
+            <FrameLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/avatar_background"
+                android:elevation="4dp">
+                
+                <ImageView
+                    android:id="@+id/profileImageView"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/default_avatar" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Task Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/taskCardView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardUseCompatPadding="true">
+
+            <!-- Task Card Content -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_background"
+                android:padding="16dp">
+
+                <!-- AI Generated Label -->
+                <TextView
+                    android:id="@+id/generatedByAITextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/generated_by_ai"
+                    android:textSize="12sp"
+                    android:textColor="#757575"
+                    android:background="@android:color/white"
+                    android:padding="4dp"
+                    android:layout_alignParentEnd="true"
+                    android:alpha="0.8"
+                    android:elevation="2dp" />
+
+                <!-- Task Title -->
+                <TextView
+                    android:id="@+id/taskTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/generated_task"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_green" />
+
+                <!-- Task Description -->
+                <TextView
+                    android:id="@+id/taskDescriptionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/task_description"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/taskTitleTextView"
+                    android:layout_marginTop="10dp" />
+
+                <!-- Red Notification Dot -->
+                <View
+                    android:id="@+id/redDotView"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@drawable/avatar_background"
+                    android:backgroundTint="#FF0000"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:elevation="4dp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/green_button"
+            android:minWidth="80dp"
+            android:minHeight="36dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/logout"
+            android:textAllCaps="false"
+            android:textColor="@color/black" />
+
+        <!-- Additional cards or content can be added here -->
+
+    </LinearLayout>
+</RelativeLayout> 
